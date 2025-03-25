@@ -1,0 +1,115 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración de metadatos y codificación -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Monitoreo</title>
+
+    <!-- Inclusión de bibliotecas externas: Bootstrap y Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /* Variables de color personalizadas para Bootstrap */
+        :root {
+            --bs-primary: #0d6efd;
+            --bs-success: #198754;
+            --bs-warning: #ffc107;
+            --bs-danger: #dc3545;
+        }
+
+        /* Estilos base para el cuerpo del documento */
+        body {
+            background-color: #f8f9fa;
+        }
+
+        /* Estilos para tarjetas de estado con efectos de hover */
+        .status-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        /* Resto de los estilos CSS permanecen igual */
+        ...
+    </style>
+</head>
+<body>
+    <div class="container py-4">
+        <!-- Encabezado de la página con título y botones de acción -->
+        <div class="row align-items-center mb-4">
+            <div class="col-12 col-md-6 mb-3 mb-md-0">
+                <h1 class="h3 mb-0">Panel de Monitoreo</h1>
+            </div>
+            <div class="col-12 col-md-6">
+                <!-- Botones de exportación y nuevo monitoreo -->
+                <div class="d-flex flex-column flex-md-row justify-content-md-end gap-2">
+                    <button class="btn btn-outline-primary w-100 w-md-auto mb-2 mb-md-0">
+                        <i class="fas fa-file-export me-2"></i>Exportar Reporte
+                    </button>
+                    <button class="btn btn-primary w-100 w-md-auto">
+                        <i class="fas fa-plus me-2"></i>Nuevo Monitoreo
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjetas de métricas con estado de sistemas -->
+        <div class="row g-4 mb-4">
+            <!-- Tarjeta de Sistemas Activos -->
+            <div class="col-12 col-sm-6 col-xl-3">
+                <div class="status-card p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <span class="status-indicator status-active"></span>
+                        <span class="metric-label">Sistemas Activos</span>
+                    </div>
+                    <div class="metric-value">24/25</div>
+                    <div class="text-success small mt-2">
+                        <i class="fas fa-arrow-up me-1"></i>99.6% Uptime
+                    </div>
+                </div>
+            </div>
+
+            <!-- Otras tarjetas de métricas (Alertas Pendientes, Incidentes Críticos, Reportes Generados) -->
+            ...
+        </div>
+
+        <!-- Contenido principal con tabla de sistemas y reportes recientes -->
+        <div class="row g-4">
+            <!-- Tabla de Sistemas Monitoreados -->
+            <div class="col-12 col-xl-8">
+                <div class="status-card p-4">
+                    <h2 class="h5 mb-4">Sistemas Monitoreados</h2>
+                    <!-- Tabla interactiva con estado de sistemas -->
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            ...
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de Reportes Recientes -->
+            <div class="col-12 col-xl-4">
+                <div class="status-card p-4">
+                    <h2 class="h5 mb-4">Reportes Recientes</h2>
+                    <!-- Lista de reportes descargables -->
+                    <div class="d-flex flex-column gap-3">
+                        ...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inclusión de script de Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
